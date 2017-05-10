@@ -3,8 +3,8 @@ myApp.controller( 'WhereMyPeeps', [ '$http', function( $http ){
 var vm = this;
 vm.addRecord = function(){
 var objectToSend ={
-name= vm.nameIn,
-location= vm.locationIn,
+name: vm.nameIn,
+location: vm.locationIn, //instead of  = changed to :
 };
 $http({
 method: 'POST',
