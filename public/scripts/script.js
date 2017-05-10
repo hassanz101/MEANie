@@ -1,5 +1,6 @@
 var myApp=angular.module( 'myApp', [] );
-myApp.controller( 'WhereMyPeeps', '$http', function( $http ){
+console.log('script sourced');
+myApp.controller( 'WhereMyPeeps', function( $http ){
 var vm = this;
 //POST to server
 vm.addRecord = function(){
@@ -25,8 +26,9 @@ vm.getRecords = function(){
     method: 'GET',
     url: '/getRecords',
   }).then( function( response ){
-    vm.allTheRecords = response;
-    console.log( vm.allTheRecords );
+    console.log("this is the response", response);
+      vm.allTheRecords = response.data;
+      console.log( vm.allTheRecords );
   });
   };
 });//end controller function
