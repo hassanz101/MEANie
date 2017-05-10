@@ -23,6 +23,6 @@ vm.allTheRecords = response;
 console.log( vm.allTheRecords );
 }), function myError( response ){
 console.log( response.statusText );
-};
+}
 };
 }]);
