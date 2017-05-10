@@ -15,6 +15,14 @@
       <input type="text" value="" ng-model="wmp.locationIn" placeholder="Location">
       <button ng-click='wmp.addRecord()'>Add</button>
       <button ng-click='wmp.getRecords()'>Read</button>
-    </div>
+      <div class = 'container row'>
+        <div ng-repeat='records in wmp.allTheRecords'>
+          <h3>{{ records.name }}</h3>
+       <p>
+         {{ records.location }}
+       </p>
+
+      </div>
+      </div>
   </body>
 </html>
