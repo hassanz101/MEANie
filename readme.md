@@ -26,9 +26,9 @@ This is a 'peer' activity, but feel free to talk/work with your pod-mates and co
 
 Your github project should have the following branches:
 * 'master' (final assignment)
-* 'cleanUp' (fixed formatting and bugs fixed)
-* DomDisplay
-* 'delete' (added delete)
+* 'cleanUp' (fixed formatting and bugs fixed) [X]-GOT IT
+* DomDisplay [X]-GOT IT
+* 'delete' (added delete) [X]-GOT IT
 
 Branching overview/workflow:
 ============================
@@ -95,7 +95,6 @@ git checkout -b DomDisplay
 ```
 
 Now take a stab at adding the DOM Append functionality. Commit often. When done, repeat the git steps to push the 'DomDisplay' branch to github, merge it's updated code into the master branch, and push the updated master to github.
-
 If time allows, take a stab at adding a button to delete records. Keep the formatting clean and use branches.
 
 glhf

@@ -11,7 +11,7 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 
 // 27017 is default mongo port
-//mongoose stuff
+//mongoose connection
 mongoose.connect('localhost:27017/meanie');
 
 // the schema
@@ -46,7 +46,7 @@ app.get('/getRecords', function(req, res) {
 }); //end GET
 
 app.post('/testPost', function(req, res) {
-  console.log('req.body.name: ' + req.body.name);
+  // console.log('req.body.name: ', + req.body.name);//was getting NaN
   console.log('in POST route:');
   // retrieved the req.body
   // putting it into an object to be saved in the db
@@ -60,3 +60,10 @@ app.post('/testPost', function(req, res) {
     res.sendStatus( 200 );
   }); //end save newRecord
 }); //end POST
+
+app.delete('/delete/:id', function(req, res){
+  console.log('Deleting records:', req.params.id);
+  ourModels.remove({ _id : req.params.id}).then(function(){
+    res.send(200);
+  });
+});
